@@ -1,23 +1,15 @@
-import { header } from "../components/header.js";
+import { PageTemplate } from "../lib/PageTemplate.js";
 
-function page404() {
-    return `
-        <!DOCTYPE html>
-        <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Jėga</title>
-        </head>
-        <body>
-            ${header()}
-            <main>
-                <h1>404 puslapis 🟨🟩🟥</h1>
-                <p>Page not found</p>
-                <p>Go home 👀</p>
-            </main>
-        </body>
-        </html>`;
+class Page404 extends PageTemplate {
+    constructor() {
+        super();
+        this.pageTitle = '404';
+        this.page = '404';
+    }
+
+    main() {
+        return `<main>404 PAGE CONTENT</main>`;
+    }
 }
 
-export { page404 };
+export { Page404 };
